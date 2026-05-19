@@ -1,0 +1,738 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffaac3;
+    margin-bottom: 3px;
+    padding: 25px 40px; /* padding atas/bawah */
+    display: flex;
+    justify-content: space-between; /* Tolak tajuk ke kiri, nav ke kanan */
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 999;
+    min-height: 110px; 
+    padding-bottom: 5px;
+    border-bottom: 15px solid #FF69B4;
+}
+
+header h1 {
+    font-size: 45px;
+    color: rgb(103, 0, 41);
+    font-family: "Great Vibes", cursive;
+    margin: 0;
+    flex-shrink: 0;  /* halang tajuk drpda kecil secara auto*/
+}
+
+.header-nav {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    flex-wrap:wrap; /* Pastikan nav tidak wrap ke baris baru */
+}
+
+.header-nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #4f0228;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s ease;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(79, 2, 40, 0.05);
+    white-space: nowrap;
+    flex-shrink: 0; 
+}
+
+.header-nav a:hover {
+    color: #ffffff;
+    background-color: #FF1493;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 12, 147, 0.25);
+}
+
+#container  {
+    max-width: 1200px;
+    width: 90%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    padding:40px;
+    padding-bottom: 50px;
+    border-radius: 25px;
+    margin: 40px auto;
+    background-color: #F5DDE0;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.qoutes {
+    text-align: center;      
+    width: 100%;           
+    margin: 0;              
+    font-size: 16px;       
+    font-weight: 500;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background:linear-gradient(to bottom, #FFD6DD, #FFF1F4);
+    color:#5e4b56;
+    line-height: 1.7;
+}
+
+
+.home-audio {
+    display: flex;
+    justify-content: center;  /* Paksa audio duduk betul-betul di tengah */
+    width: 100%;
+    margin: 10px 0 20px 0;    /* Beri sedikit jarak atas dan bawah */
+}
+
+.home-audio audio {
+    width: 100%;
+    max-width: 550px;         /* Lebarkan saiz player (Boleh ubah ikut kesukaan anda) */
+    box-shadow: 0 4px 12px rgba(254, 102, 148, 0.15); /* Beri kesan bayang lembut warna pink */
+    border-radius: 30px;
+}
+
+.home {
+    background-color: #fe6694;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 3px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;   /* Susun teks atas ke bawah, bukan kiri ke kanan */
+    align-items: center;       /* Letakkan semua elemen betul-betul di tengah */
+    text-align: center;
+     align-items: center;
+}
+
+.home-profile{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    border: 3px solid #FF69B4;
+    border-radius: 40px; 
+    padding: 40px 50px;
+    box-shadow: 0 10px 30px rgba(254, 102, 148, 0.1);
+}
+
+.home-box {
+    flex: 0 0 220px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #F5DDE0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.home-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.home-text h2 {
+    color: rgb(103, 0, 41);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+     margin-bottom: 10px;
+}
+
+.box {
+    width:auto;
+    margin: 15px 0;
+    margin-top: 10px;
+    line-height: 1.5;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    padding: 25px 20px;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+}
+
+.box img,
+.image-row img,
+.single-image img, 
+.person-card img,
+.family-card img {
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+ .box img {   
+    max-width: 100% !important;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction:column;
+}
+
+.box img:hover,
+.image-row img:hover,
+.single-image img:hover {
+   transform:scale(1.03);
+}
+
+.image-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-row img {
+  width: 50%;
+  height: 350px;
+  border-radius: 20px;
+    object-fit:cover;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+.single-image {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.single-image img {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 70px;
+  color: rgb(103, 0, 41);
+  font-weight:700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  font-family:"Great Vibes",cursive; 
+}
+
+h2,
+h2.edu-right {
+  font-size: 30px;
+  color: rgb(103, 0, 41);
+  font-style: normal;
+  margin: 0;
+  line-height: 1.2;
+  font-family: 'Cinzel', serif;
+letter-spacing: 2px;
+font-weight:700;
+}
+
+p,
+p.description,
+p.edu-right {
+  color: #5e4b56;
+  font-family: 'Poppins', sans-serif;
+  font-optical-sizing: auto;
+  font-size:  22px;
+  margin: 0;
+  line-height:2;
+  text-align: justify;
+}
+
+nav {
+    background-color: #ffb6c1;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+    border-radius: 50px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 10px 22px;
+    color: #4f0228;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    background-color: #fff0f5;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(79, 2, 40, 0.08)
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #FF1493;
+   transform: scale(1.08);
+   box-shadow: 0 6px 15px rgba(255, 20, 147, 0.3);
+}
+
+/* Main profile card */
+.profile-card {
+    display: flex;
+    background-color: white;
+    border: 3px solid #FF69B4;
+    border-radius: 25px;
+    padding: 35px;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    gap: 40px;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Bahagian Kiri (Gambar) */
+.profile-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-avatar img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #F5DDE0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.profile-right {
+    flex: 2;
+}
+
+.profile-header h2 {
+    font-family:"Poppins",cursive;
+    color: rgb(103, 0, 41);
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #FF69B4;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.profile-table tr {
+    border-bottom: 1px solid #F5DDE0; 
+}
+
+.profile-table tr:last-child {
+    border-bottom: none;
+}
+
+.profile-table td {
+    padding: 15px 10px;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.profile-table td.label {
+    font-weight: 600;
+    color: rgb(103, 0, 41);
+    width: 30%;
+}
+
+.kdrama {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.kdrama-gallery{
+    display: flex;
+    gap: 15px;
+}
+
+.kdrama-item {
+    text-align: center;
+    width: 45%;
+}
+
+.kdrama-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.kdrama-item p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+     transform:scale(1.03);
+}
+
+.song-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Family */
+.family-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    margin-top: 30px;
+}
+
+/* box */
+
+.family-card{
+    column-span: all; /* untuk full dari hujung ke hujung */
+    margin-bottom: 20px; 
+    position: relative; /* teks putih ada dalam gambar */
+    overflow: hidden;  
+    border-radius: 20px;
+}
+
+
+.family-card img {
+    width: 100%;
+    height: 550px;      
+    object-fit: cover; 
+    object-position: center; /*gambar berada di tengah*/
+    border-radius: 20px;
+}
+
+.person-card {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    break-inside: avoid; /* nak bagi gambar tersusun */
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.person-card img {
+    width: 100%;
+    display: block; /* nak bagi gambar tersusun kebawah */
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.person-card:hover img,
+.family-card:hover img {
+    filter: brightness(70%) blur(2px);
+    transform: scale(1.05);
+}
+
+.person-card p,
+.family-card p {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.person-card:hover p,
+.family-card:hover p {
+    opacity: 1;
+}
+
+/* Education */
+.education-card {
+    display: flex;
+    background-color: white;
+    border-radius: 35px;
+    padding:30px 40px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+    transition: 0.4s ease;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    position: relative;
+    overflow: hiddden; /* Mengelakkan apa-apa elemen terkeluar */
+
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.25);
+}
+
+/* Gambar kiri */
+.edu-left {
+    flex: 0 0 210px;
+    position: relative;
+    max-width: 250px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.edu-image {
+    width: 190px;
+    height: 190px;
+    border-radius: 25px;
+    overflow: hidden; /* crop jika gambar lebih besar dri border */
+    border: 4px solid #f8f0ff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.edu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bahagian Teks -kanan */
+.edu-right {
+    flex: 1;
+    padding-left:0px;
+}
+
+/* fav food */
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.food-card {
+    background-color: white;
+    flex: 1; 
+    max-width: 500px;
+    border-radius: 35px; 
+    border: 3px solid #FF69B4;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(254, 102, 148, 0.1);
+    transition: all 0.4s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(254, 102, 148, 0.25);
+
+}
+
+.food-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-bottom: 3px solid #F5DDE0;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.1);
+}
+
+.food-text {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+p.footer-text {
+    background-color: #ff2c5e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Jarakkan setiap set box supaya tidak rapat melekat */
+.exp-set {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   KOD PENYELAMAT UNTUK TAMPILAN TELEFON (MOBILE RESPONSIVE)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Baiki Header & Menu supaya tersusun ke bawah */
+    header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 15px 10px !important;
+        min-height: auto !important;
+    }
+
+    header h1 {
+        font-size: 35px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .header-nav {
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .header-nav a {
+        font-size: 13px !important;
+        padding: 6px 12px !important;
+    }
+
+    /* Navigasi tengah halaman utama */
+    nav {
+        padding: 10px !important;
+        margin: 15px auto !important;
+        border-radius: 20px !important;
+        gap: 6px !important;
+    }
+
+    nav a {
+        font-size: 13px !important;
+        padding: 8px 14px !important;
+    }
+
+    /* 2. Baiki Kontainer Utama Web */
+    #container {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 20px auto !important;
+        gap: 15px !important;
+    }
+
+    /* 3. Baiki Semua Jenis Kad & Kotak (.box, .dream-box, .education-card) */
+    .box, .dream-box, .education-card, .profile-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Tulisan perenggan di fon dibesarkan sedikit ke 15px untuk pembacaan selesa */
+    p, p.description, p.edu-right {
+        font-size: 15px !important;
+        text-align: center !important; /* Di fon lebih cantik tulisan di tengah */
+        line-height: 1.6 !important;
+    }
+
+    h2, h2.edu-right {
+        font-size: 20px !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+    }
+
+    /* 4. Baiki Pengurusan Gambar di Telefon */
+    /* Mengubah susunan 2 gambar bersebelahan menjadi menegak ke bawah */
+    .image-row {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .image-row img, .single-image img, .dream-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 220px !important; /* Rendahkan ketinggian gambar di fon supaya tak padat */
+        object-fit: cover !important;
+    }
+
+    /* Gambar untuk halaman Education */
+    .edu-left {
+        flex: 0 0 auto !important;
+    }
+
+    .edu-image {
+        width: 140px !important;
+        height: 140px !important;
+        border-radius: 15px !important;
+    }
+
+    /* 5. Baiki Halaman Makanan (Favourite Food) */
+    .food-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .food-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .food-image {
+        height: 200px !important;
+    }
+
+    /* ==========================================================================
+       BAIKI HALAMAN INDEX (HOME) UNTUK TELEFON
+       ========================================================================== */
+    .home-profile {
+        flex-direction: column !important; /* Tukar daripada melintang ke menegak */
+        gap: 20px !important;
+        padding: 30px 20px !important;
+        text-align: center !important;
+        width: 100% !important;
+        border-radius: 25px !important;
+    }
+
+    .home-box {
+        flex: 0 0 180px !important; /* Kecilkan sikit bulatan gambar di fon */
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .home-text {
+        text-align: center !important;
+    }
+
+    .home-text h2 {
+        font-size: 24px !important;
+        text-align: center !important;
+    }
+}
